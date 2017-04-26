@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content="Digito de Verificacion">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>Digito de Verificacion</title>
+      <link rel="shortcut icon" href="images/favicon.png">
+      <link rel="stylesheet" href="css/fuentes.css">
+      <link rel="stylesheet" href="css/iconos.css">
+      <link rel="stylesheet" href="css/tema.css">
+      <link rel="stylesheet" href="css/styles.css">
+   </head>
+   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+         <!-- Contenido -->
+         <main class="mdl-layout__content">
+            <div class="mdl-layout__tab-panel is-active" id="overview">
+               <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                  <div class="mdl-card mdl-cell mdl-cell--12-col">
+                     <div class="mdl-card__supporting-text">
+                        <h4>Generar dígito</h4>
+                        <div class="mdl-textfield mdl-js-textfield">
+                           <div class="left">
+                              <label class="mdl-button mdl-js-button mdl-button--icon" for="public">
+                              <i class="material-icons">lock</i>
+                              </label>
+                              <div class="mdl-textfield__holder">
+                                 <input class="mdl-textfield__input number" type="number" id="number">
+                                 <label class="mdl-textfield__label " for="public"></label>
+                              </div>
+                           </div>
+                           <div class="right digit" id="digito"></div>
+                        </div>
+                        <div class="show" id="div_clave_privada">
+                           <i class="material-icons">lock_open</i> <span id="clave_privada">  </span>
+                        </div>
+                     </div>
+                     <div class="mdl-card__actions">
+                        <a class="mdl-button" onclick="javascript:procesar(1)">Clave aleatoria</a>
+                        <a class="mdl-button" onclick="javascript:procesar(2)">Clave predeterminada</a>
+                        <a class="mdl-button" onclick="javascript:limpiar()">Limpiar</a>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </main>
+      </div>
+      <!--Scripts -->
+      <script src="assets/material.min.js"></script>
+      <script src="GenerarDigito.js"></script>
+   </body>
+</html>
